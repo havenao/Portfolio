@@ -221,7 +221,7 @@ h5 {
   align-items: center;
   margin-bottom: 5rem;
   color: var(--bg-secondary);
-  background-color: transparent;
+  background-color: white;
   border-radius: 1rem;
   box-shadow: 0 0 5px 5px;
 }
@@ -240,7 +240,6 @@ h5 {
   text-align: center;
   padding: 5rem 0rem 2rem;
   max-width: 35rem;
-  min-width: 20rem;
 }
 
 .order-left {
@@ -284,8 +283,26 @@ h5 {
     display: none;
     padding-left: 0;
   }
-}
+  .container {
+    padding: 0;
+    margin: 1rem;
+    margin-bottom: 4rem;
+  }
+  .text-box {
+    padding: 5rem 2rem 2rem;
+  }
 
+  p {
+    font-size: 14px;
+  }
+  .circle {
+    max-width: 150px;
+    margin: 0;
+  }
+  .articles {
+    padding: 0;
+  }
+}
 @media only screen and (min-width: 600px) {
   .navbar {
     top: 0;
