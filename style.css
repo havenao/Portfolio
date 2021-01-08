@@ -19,8 +19,8 @@
 
 body {
   color: var(--bg-primary);
-  background-color: var(--bg-tertiary);
-  /* background-color: white; */
+  /* background-color: var(--bg-tertiary); */
+  background-color: white;
   margin: 0;
   padding: 0;
   display: flex;
@@ -57,6 +57,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: var(--bg-tertiary);
 }
 
 a,
@@ -150,11 +151,10 @@ a:active {
   max-width: 60px;
 }
 /* ============= */
-/* PAGE CONTENTS */
+/* HOME CONTENTS */
 /* ============= */
 
 .landing {
-  /* margin-bottom: 4rem; */
   width: 100%;
   height: 80vh;
   display: flex;
@@ -194,6 +194,8 @@ h5 {
 .title {
   text-align: center;
   padding: 0;
+  position: relative;
+  z-index: 2;
 }
 
 #logo-lrg {
@@ -213,11 +215,10 @@ h5 {
 }
 #hint h3 {
   font-weight: 900;
-
   margin-bottom: 10vh;
 }
 .articles {
-  padding: 0 3rem;
+  padding: 0 3%;
 }
 
 .container {
@@ -255,10 +256,82 @@ h5 {
 .order-right {
   order: 1;
 }
+/* ============= */
+/* Other Page Styles */
+/* ============= */
 
+.art {
+  width: 90%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px 5px;
+  margin: 5%;
+  background-color: var(--bg-primary);
+}
+
+.code-media {
+  width: 300px;
+  height: 100%;
+  box-shadow: 0 0 5px 5px;
+  transition: var(--transition-speed);
+  border-radius: 1rem;
+}
+
+#play {
+  background-color: var(--color-primary);
+  color: white;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  font-size: 18px;
+  font-family: brandon-grotesque, sans-serif;
+  border: none;
+  margin: 0 2rem;
+  transition: var(--transition-speed);
+}
+
+#play:hover {
+  transform: scale(1.25);
+}
+.pages {
+  background-color: white;
+  flex-direction: column;
+}
+
+.push-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.page-header {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-tertiary);
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.page-header-logo {
+  width: 20rem;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0.25;
+  justify-self: flex-end;
+}
+
+.gallery {
+  /* padding: 4rem; */
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
 /* ============= */
 /* MEDIA QUERIES */
 /* ============= */
+
+/* Phone size */
 @media only screen and (max-width: 599px) {
   .navbar {
     bottom: 0;
@@ -310,10 +383,15 @@ h5 {
   .articles {
     padding: 0;
   }
-  main {
-    margin-bottom: 4rem;
+  .code-media.right,
+  .code-media.left {
+    transform-origin: center;
+    transform: scale(1.2);
   }
 }
+/* ================== */
+/* bigger than phones */
+/* ================== */
 @media only screen and (min-width: 600px) {
   .navbar {
     top: 0;
@@ -338,7 +416,6 @@ h5 {
   }
 
   .landing {
-    justify-content: space-evenly;
     height: 90vh;
   }
 
@@ -346,9 +423,20 @@ h5 {
     max-width: 300px;
     transform: scale(1.25);
   }
-}
 
-/* ipad size and up */
+  .art {
+    width: 45%;
+    margin: 2.5%;
+  }
+  .code-media.right,
+  .code-media.left {
+    transform-origin: center;
+    transform: scale(1.2);
+  }
+}
+/* ================ */
+/* bigger than ipad */
+/* ================ */
 @media only screen and (min-width: 970px) {
   .container {
     flex-direction: row;
@@ -387,7 +475,7 @@ h5 {
     border-radius: 1rem;
     box-shadow: 0 0 5px 5px;
   }
-  .left:hover {
+  .left.skew:hover {
     transform: skewX(var(--slant-neg));
   }
   .skewer-right:hover {
@@ -396,14 +484,38 @@ h5 {
     border-radius: 1rem;
     box-shadow: 0 0 5px 5px;
   }
-  .right:hover {
+  .right.skew:hover {
     transform: skewX(var(--slant-pos));
   }
   .container:hover .circle {
     transform: scale(1.25);
   }
-}
 
+  .art {
+    width: 30%;
+    margin: 1.5%;
+  }
+
+  .code-media.left,
+  .code-media.right {
+    transform: scale(1);
+  }
+  .code-media.right {
+    transform-origin: right;
+  }
+  .code-media.left {
+    transform-origin: left;
+  }
+  .code-media.right:hover {
+    transform: scale(2);
+  }
+  .code-media.left:hover {
+    transform: scale(2);
+  }
+}
+/* ================ */
+/* Huge Screens */
+/* ================ */
 @media only screen and (min-width: 1200px) {
   h1 {
     font-size: 76px;

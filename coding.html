@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coding Projects</title>
+    <title>Haven's Coding Projects</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
@@ -64,8 +64,63 @@
     </nav>
     <div class="nav-spacer"></div>
 
-    <main>
-      <h2>Check out my Projects!</h2>
+    <main class="pages">
+      <header class="page-header">
+        <img class="page-header-logo" src="./images/Dragon.svg" alt="" />
+
+        <div>
+          <h1 class="title">HAVEN SCHROCK</h1>
+          <h2 class="title">PROGRAMS</h2>
+        </div>
+      </header>
+
+      <section class="articles">
+        <article class="container">
+          <div>
+            <video class="code-media left" width="478" height="438" controls>
+              <source src="./videos/PA-Bones-V2-demo.mov" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="text-box">
+            <h3><strong>Pennsylvania Bones v1</strong></h3>
+
+            <p>
+              In this game, you play as an archeologist trapped in a burning
+              museum. Try to save as many artifacts as you can and collect
+              special items to aid you as you descend to escape. I made this
+              using Ruby and the Gosu library.
+            </p>
+          </div>
+        </article>
+
+        <article class="container">
+          <div class="text-box order-left">
+            <h3><strong>Pennsylvania Bones v2</strong></h3>
+
+            <p>
+              I am remaking the game using Unity. I have added animations and
+              some UI elements. I have put the game on a temporary pause to
+              focus on other areas of programming. You can play the unfinished
+              current version on my itch.io page (I recommend playing in full
+              screen mode).
+            </p>
+            <div class="push-right">
+              <button id="play">
+                <a href="https://scookins.itch.io/pennsylvania-bones">PLAY!</a>
+              </button>
+            </div>
+          </div>
+
+          <div class="order-right">
+            <img
+              class="code-media right"
+              src="images/PABones2.png"
+              alt="My game: Pennsylvania Bones"
+            />
+          </div>
+        </article>
+      </section>
     </main>
   </body>
 </html>
