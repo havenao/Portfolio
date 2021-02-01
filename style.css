@@ -274,6 +274,7 @@ h5 {
   box-shadow: 0 0 5px 5px;
   transition: var(--transition-speed);
   border-radius: 1rem;
+  background-color: var(--bg-primary);
 }
 
 #play {
@@ -287,6 +288,7 @@ h5 {
   border: none;
   margin: 0 2rem;
   transition: var(--transition-speed);
+  margin-top: 1rem;
 }
 
 #play:hover {
@@ -326,6 +328,23 @@ h5 {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+.resume {
+  width: 100%;
+  height: 100%;
+}
+
+.res-holder {
+  width: 80vw;
+  height: 125rem;
+}
+
+.sub-title {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
 }
 /* ============= */
 /* MEDIA QUERIES */
@@ -397,6 +416,7 @@ h5 {
     top: 0;
     width: 5rem;
     padding-top: 1em;
+    overflow: hidden;
   }
 
   .navbar:hover {
